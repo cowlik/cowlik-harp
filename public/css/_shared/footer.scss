@@ -1,0 +1,12 @@
+// footer
+// --------------------------------------------------
+
+footer {
+    height: 40px;
+    background: linear-gradient(to bottom, $color-mint  0%, $color-pear 100%);
+    flex: none;
+
+    @media (min-width: $screen-med) {
+        height: 90px;
+    }
+}

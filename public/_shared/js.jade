@@ -1,0 +1,8 @@
+- var page = current.path[0]
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+
+if environment == "production"
+    script(src="/js/cowlik.min.js")
+else
+    script(src="/js/cowlik.js")

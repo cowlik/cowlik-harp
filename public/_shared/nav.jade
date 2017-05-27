@@ -1,0 +1,15 @@
+mixin a(slug, title)
+    a(href="/work/#{slug}") !{title.replace(" - ", "<span>")}
+
+nav
+    h2 Latest Work:
+    ul
+        for item, slug in public.work._data
+            if item.publish != "false"
+                if slug == current.path[1]
+                    li.selected
+                        +a(slug, item.title)
+                else
+                    li
+                        +a(slug, item.title)
+                    

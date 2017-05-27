@@ -1,0 +1,23 @@
+// header
+// --------------------------------------------------
+
+header {
+    background: linear-gradient(to bottom, $color-pear 0%, $color-mint 70%);
+    flex: none;
+
+    h1 {
+        @include container();
+    }
+
+    a {
+        padding: $spacing-max $spacing-min 5px;
+        color: #fff;
+        display: inline-block;
+    }
+
+    @media (min-width: $screen-med) {
+        a {
+            padding: ($spacing-max + $spacing-min) $spacing-max 10px;
+        }
+    }
+}

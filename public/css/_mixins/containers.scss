@@ -1,0 +1,9 @@
+// containers
+// --------------------------------------------------
+
+@mixin container() {
+    width: 100%;
+    max-width: $screen-max;
+    margin: 0 auto;
+    overflow: hidden;
+}

@@ -1,0 +1,33 @@
+mixin title()
+    if current.path.length > 1
+        if publish != "false"
+            title= "cowlik | " + title
+        else
+            title= "cowlik | 404"
+    else
+        title= title
+
+mixin main()
+    main
+      if current.path.length > 1
+        if publish != "false"
+          != yield
+        else
+          != partial("404")
+      else
+          != yield
+
+doctype
+html(lang="en")
+  head
+    +title()
+    != partial("_shared/meta")
+    //link(rel="icon", href="/favicon.png")
+    != partial("_shared/css")
+    //!= partial("_shared/analytics")
+  body
+    != partial("_shared/header")
+    +main()
+    != partial("_shared/nav")
+    != partial("_shared/footer")
+    //!= partial("_shared/js")

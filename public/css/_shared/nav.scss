@@ -1,0 +1,64 @@
+// nav
+// --------------------------------------------------
+
+nav {
+    margin-top: $spacing-min;
+    background-color: #fff;
+    font-size: 22px;
+    flex: none;
+
+    h2 {
+        @include container();
+        padding: $spacing-min;
+    }
+
+    ul {
+        background-color: $color-mint;
+        list-style: none;
+        text-align: left;
+    }
+
+    li {
+        border-bottom: 1px solid #eee;
+        transition: background-color 0.3s ease-out;
+
+        a {
+            @include container();
+            line-height: 95%;
+            max-width: $screen-max;
+            padding: 15px $spacing-min;
+            color: $color-gray;
+            font-weight: 500;
+            display: block;
+
+            span {
+                font-size: 75%;
+                font-weight: normal;
+                display: block;
+            }
+        }
+
+        &:hover,
+        &.selected {
+            background-color: $color-pear;
+        }
+    }
+
+    @media (max-width: ($screen-min - 1px)) {
+        font-size: 26px;
+    }
+
+    @media (min-width: $screen-med) {
+        font-size: 32px;
+
+        h2 {
+            padding: $spacing-min $spacing-max;
+        }
+
+        li {
+            a {
+                padding: 20px $spacing-max;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+// layout
+// --------------------------------------------------
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-color: #eee;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    height: 100%;
+    color: $color-gray;
+    font-family: "Podkova", serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-med) {
+        font-size: 24px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: $color-gray-light;
+}
+
+h1 {
+    line-height: 95%;
+    font-size: 36px;
+    font-weight: bold;
+
+    span {
+        font-size: 75%;
+        font-weight: 600;
+        display: block;
+    }
+
+    @media (min-width: $screen-med) {
+        font-size: 48px;
+    }
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+
+    @media (min-width: $screen-med) {
+        font-size: 36px;
+    }
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    line-height: 130%;
+}
+
+a {
+    color: $color-mint;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+header,
+nav,
+main,
+footer {
+    width: 100%;
+    min-width: $screen-min;
+}
+
+main {
+    @include container();
+    padding: $spacing-min;
+    flex: 1 0 auto;
+
+    @media (min-width: $screen-med) {
+        padding: $spacing-max;
+    }
+}
