@@ -7,9 +7,8 @@ nav
         for item, slug in public.work._data
             if item.publish != "false"
                 if slug == current.path[1]
-                    li.selected
+                    li(class="#{slug} selected")
                         +a(slug, item.title)
                 else
-                    li
+                    li(class="#{slug}")
                         +a(slug, item.title)
-                    

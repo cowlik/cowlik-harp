@@ -4,9 +4,23 @@
 footer {
     height: 40px;
     background: linear-gradient(to bottom, $color-mint  0%, $color-pear 100%);
+    text-align: right;
     flex: none;
+
+    p {
+        @include container();
+        line-height: 40px;
+        padding: 0 $spacing-min;
+        color: $color-gray-light;
+        font-size: 70%;
+    }
 
     @media (min-width: $screen-med) {
         height: 90px;
+
+        p {
+            line-height: 90px;
+            padding: 0 $spacing-max;
+        }
     }
 }

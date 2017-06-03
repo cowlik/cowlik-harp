@@ -1,4 +1,8 @@
-- var page = (current.path[0] != "index") ? "/" + current.path[0] : "";
+mixin og-url()
+    if current.path.length > 1
+        meta(property="og:url", content="#{url}/#{current.path[0]}/#{current.path[1]}")
+    else
+        meta(property="og:url", content="#{url}")
 
 meta(charset="utf-8")
 meta(name="description", content="#{description}")
@@ -10,4 +14,4 @@ meta(property="fb:app_id", content="#{facebook.app_id}")
 meta(property="og:description", content="#{description}")
 meta(property="og:image", content="#{url}/imgs/card.png")
 meta(property="og:title", content="#{title}")
-meta(property="og:url", content="#{url}#{page}")
++og-url()

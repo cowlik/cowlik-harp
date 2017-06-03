@@ -1,12 +1,17 @@
 {
-    "andeavor-day-one": { 
+    "andeavor": { 
         "date": "05.23.2017",
         "title": "Andeavor - Day One",
         "publish": "true"
     },
     "tease": {
         "date": "05.23.2017",
-        "title": "Tease",
+        "title": "Tease - teaseballard.com",
+        "publish": "true"
+    },
+    "walottery": {
+        "date": "05.23.2017",
+        "title": "Washington's Lottery - walottery.com",
         "publish": "true"
     }
 }

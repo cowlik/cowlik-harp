@@ -1,0 +1,16 @@
+// main
+// --------------------------------------------------
+
+main {
+    @include container();
+    padding: $spacing-min;
+    flex: 1 0 auto;
+
+    h1 {
+        line-height: 85%;
+    }
+
+    @media (min-width: $screen-med) {
+        padding: $spacing-max;
+    }
+}

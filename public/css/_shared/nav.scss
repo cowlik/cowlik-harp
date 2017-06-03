@@ -29,18 +29,62 @@ nav {
             padding: 15px $spacing-min;
             color: $color-gray;
             font-weight: 500;
+            overflow: hidden;
+            position: relative;
+            display: block;
+        }
+
+         span {
+            margin-left: 2px;
+            font-size: 75%;
+            font-weight: normal;
             display: block;
 
-            span {
-                font-size: 75%;
-                font-weight: normal;
-                display: block;
+            &:after {
+                @include fa-icon();
+                content: $fa-var-caret-right;
+                padding-left: 7px;
+                top: 1px;
+                position: relative;
+                transition: padding-left 0.15s ease-out;
             }
         }
 
         &:hover,
         &.selected {
             background-color: $color-pear;
+        }
+
+        &:hover {
+            span {
+                &:after {
+                    padding-left: 11px;
+                }
+            }
+        }
+
+        &.andeavor {
+            span {
+                &:after {
+                    color: $color-andeavor;
+                }
+            }
+        }
+
+        &.tease {
+            span {
+                &:after {
+                    color: $color-tease;
+                }
+            }
+        }
+
+        &.walottery {
+            span {
+                &:after {
+                    color: $color-walottery;
+                }
+            }
         }
     }
 
@@ -58,6 +102,21 @@ nav {
         li {
             a {
                 padding: 20px $spacing-max;
+            }
+
+            span {
+                &:after {
+                    font-size: 86%;
+                    padding-left: 10px;
+                }
+            }
+
+            &:hover {
+                span {
+                    &:after {
+                        padding-left: 14px;
+                    }
+                }
             }
         }
     }

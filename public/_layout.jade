@@ -8,14 +8,16 @@ mixin title()
         title= title
 
 mixin main()
-    main
-      if current.path.length > 1
+    if current.path.length > 1
         if publish != "false"
-          != yield
+            main(id="#{current.path[0]}", class="#{current.path[1]}")
+                != yield
         else
-          != partial("404")
-      else
-          != yield
+            main
+                != partial("404")
+    else
+        main
+            != yield
 
 doctype
 html(lang="en")

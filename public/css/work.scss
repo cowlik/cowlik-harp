@@ -1,0 +1,160 @@
+// work
+// --------------------------------------------------
+
+@import "_font-awesome-4.7.0/font-awesome";
+
+@import "_partials/variables";
+@import "_partials/mixins";
+
+#work {
+    p {
+        margin-bottom: $spacing-min / 2;
+    }
+
+    h1 {
+        margin-bottom: $spacing-min;
+
+        a,
+        span {
+            margin-left: 2px;
+            color: $color-gray-light;
+            font-size: 60%;
+            font-weight: 600;
+            display: block;
+        }
+
+        a {
+            &:after {
+                @include fa-icon();
+                content: $fa-var-external-link;
+                padding-left: 7px;
+                font-size: 80%;
+                top: 1px;
+                position: relative;
+                transition: padding-left 0.15s ease-out;
+            }
+
+            &:hover {
+                &:after {
+                    padding-left: 11px;
+                }
+            }
+        }
+    }
+
+    h3 {
+        padding: ($spacing-min / 2) 0;
+        margin-bottom: $spacing-min / 2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    ul {
+        margin-bottom: $spacing-min / 2;
+        margin-left: $spacing-min;
+    }
+
+    > div {
+        > div {
+            &:first-child {
+                padding-top: $spacing-min;
+                border-top: 1px solid #ccc;
+            }
+        }
+    }
+
+    .logo {
+        margin: 0 auto $spacing-max;
+        display: none;
+    }
+
+    &.tease {
+        h1 {
+            a {
+                &:after {
+                    color: $color-tease;
+                }
+            }
+        }
+
+        h3 {
+            border-color: lighten($color-tease, 25%);
+        }
+
+        > div {
+            > div {
+                &:first-child {
+                    border-color: lighten($color-tease, 25%);
+
+                    > p {
+                        &:first-child {
+                            border-color: lighten($color-tease, 25%);
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+        }
+    }
+
+    @media (min-width: $screen-med) {
+        h1 {
+            margin-bottom: $spacing-max;
+
+            a {
+                &:after {
+                    //font-size: 86%;
+                    padding-left: 10px;
+                }
+
+                &:hover {
+                    &:after {
+                        padding-left: 14px;
+                    }
+                }
+            } 
+        }
+
+        h3 {
+            padding-top: $spacing-min;
+        }
+
+        .logo {
+            display: block;
+        }
+
+        > div {
+            width: 100%;
+            display: table;
+
+            > div {
+                vertical-align: top;
+                display: table-cell;
+
+                &:first-child {
+                    width: 75%;
+                    padding-top: 0;
+                    padding-right: $spacing-max;
+                    border-top: none;
+
+                    + div {
+                        width: 25%;
+                        padding-top: $spacing-max;
+                        padding-left: $spacing-max;
+                    }
+
+                    > p {
+                        &:first-child {
+                            padding-top: $spacing-max;
+                            border-top: 1px solid #ccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

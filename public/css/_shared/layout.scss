@@ -21,11 +21,12 @@ body {
     color: $color-gray;
     font-family: "Podkova", serif;
     font-size: 18px;
+    font-weight: normal;
     display: flex;
     flex-direction: column;
 
     @media (min-width: $screen-med) {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
@@ -40,15 +41,8 @@ h6 {
 }
 
 h1 {
-    line-height: 95%;
     font-size: 36px;
     font-weight: bold;
-
-    span {
-        font-size: 75%;
-        font-weight: 600;
-        display: block;
-    }
 
     @media (min-width: $screen-med) {
         font-size: 48px;
@@ -64,6 +58,10 @@ h2 {
     }
 }
 
+h3 {
+    font-weight: 600;
+}
+
 ol,
 ul {
     margin: 0;
@@ -72,11 +70,10 @@ ul {
 
 p {
     margin: 0;
-    line-height: 130%;
 }
 
 a {
-    color: $color-mint;
+    color: $color-gray;
     text-decoration: none;
 }
 
@@ -90,14 +87,4 @@ main,
 footer {
     width: 100%;
     min-width: $screen-min;
-}
-
-main {
-    @include container();
-    padding: $spacing-min;
-    flex: 1 0 auto;
-
-    @media (min-width: $screen-med) {
-        padding: $spacing-max;
-    }
 }
