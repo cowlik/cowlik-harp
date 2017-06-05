@@ -1,24 +1,38 @@
-h1 !{title.replace(" - ", "<a href='http://www.teaseballard.com' target='_blank'>")}
-div
-    div
-        p This lovely salon located in the Ballard neighborhood of Seattle was in need of a website makeover. Being jointly owned by my wife and sister-in-law, they gave me the complete freedom to design and develop the new site. Since launching the site, the salon has seen a steady rise in bookings thanks to UI &amp; SEO improvement, plus Facebook integration. 
-    div
-        img(class="logo", src="/work/imgs/tease/logo.svg", width="232", height="122", alt="tease")
-        h3 Launch
-        p 04.25.2017
-        h3 Responsiblities:
+mixin aside()
+    aside
+        h3 Launched:
+        p April 2017
+        h3 Responsibities:
         ul
             li Design
             li UI
             li Development
-        h3 Technologies
+        h3 Technologies:
         ul
-            li HTML5
-            li CSS
+            li HTML
+            li SASS
             li JavaScript
             li Harp
             li Jade
-            li Node.js
             li Gulp
-            li SASS
             li Git
+
+header#work-header
+    div
+        div
+            h1 !{title.replace(" - ", "<a href='http://www.teaseballard.com' target='_blank'>")}
+        div
+            img(class="logo", src="/imgs/work/tease/logo.svg", width="232", height="122", alt="Tease")
+div
+    div
+        p This lovely salon located in the Ballard neighborhood of Seattle was in need of a website makeover. Being jointly owned by my wife and sister-in-law, they gave me the complete freedom to design and develop the new site. Since launching the site, the salon has seen a steady rise in bookings thanks to UI &amp; SEO improvement, plus Facebook integration. 
+        +aside()
+        div.work-screens
+            img(src="/imgs/work/tease/screen-home-1.jpg", width="414", height="736", alt="Home")
+            img(src="/imgs/work/tease/screen-home-2.jpg", width="414", height="736", alt="Home")
+            img(src="/imgs/work/tease/screen-home-3.jpg", width="414", height="736", alt="Home")
+            img(src="/imgs/work/tease/screen-about.jpg", width="414", height="736", alt="About")
+            img(src="/imgs/work/tease/screen-services.jpg", width="414", height="736", alt="Services")
+            img(src="/imgs/work/tease/screen-contact.jpg", width="414", height="736", alt="Contact")
+    +aside()
+    

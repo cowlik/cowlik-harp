@@ -7,13 +7,275 @@
 @import "_partials/mixins";
 
 #work {
+    padding-bottom: $spacing-max;
+    position: relative;
+
     p {
         margin-bottom: $spacing-min / 2;
     }
 
-    h1 {
-        margin-bottom: $spacing-min;
+    h3 {
+        padding-top: $spacing-min;
+        
+        &:after {
+            content: "\2014";
+            font-size: 18px;
+            font-weight: normal;
+            display: block;
+        }
+    }
 
+    ul {
+        margin-bottom: $spacing-min / 2;
+        margin-left: $spacing-min;
+        text-align: left;
+        display: inline-block;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    > div {
+        > aside {
+            display: none;
+
+            > h3 {
+                &:first-child {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    &.andeavor {
+        h1 {
+            a {
+                &:after {
+                    color: $color-andeavor;
+                }
+            }
+        }
+
+        h3 {
+            &:after {
+                color: $color-andeavor;
+            }
+        }
+
+        .logo {
+            max-width: 50px;
+        }
+
+        #work-header {
+            &:after {
+                color: $color-andeavor;
+            }
+        }
+
+        .work-screens {
+            img {
+                max-width: 414px;
+
+                &:nth-child(4) {
+                    max-width: 800px;
+                }
+            }
+        }
+    }
+
+    &.tease {
+        h1 {
+            &:after {
+                color: $color-tease;
+            }
+
+            a {
+                &:after {
+                    color: $color-tease;
+                }
+            }
+        }
+
+        h3 {
+            &:after {
+                color: $color-tease;
+            }
+        }
+
+        .logo {
+            max-width: 100px;
+        }
+
+        #work-header {
+            &:after {
+                color: $color-tease;
+            }
+        }
+
+        .work-screens {
+            img {
+                max-width: 414px;
+            }
+        }
+    }
+
+    &.walottery {
+        h1 {
+            a {
+                &:after {
+                    color: $color-walottery;
+                }
+            }
+        }
+
+        h3 {
+            &:after {
+                color: $color-walottery;
+            }
+        }
+
+        .logo {
+            max-width: 65px;
+        }
+
+        #work-header {
+            &:after {
+                color: $color-walottery;
+            }
+        }
+
+        .work-screens {
+            img {
+                max-width: 414px;
+            }
+        }
+    }
+
+    @media (max-width: ($screen-med - 1px)) {
+        &.tease {
+            #work-header {
+                > div {
+                    > div {
+                        &:first-child {
+                            width: 70%;
+                        }
+
+                        &:last-child {
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen-med) {
+        h1 {
+            a {
+                &:after {
+                    padding-left: 10px;
+                }
+
+                &:hover {
+                    &:after {
+                        padding-left: 14px;
+                    }
+                }
+            } 
+        }
+
+        h3 {
+            padding-top: $spacing-min;
+        }
+
+        li {
+            font-size: 20px;
+        }
+
+        > div {
+            width: 100%;
+            padding-top: 10px;
+            display: table;
+
+            > div,
+            > aside {
+                vertical-align: top;
+                display: table-cell;
+            }
+
+            > div {
+                width: 75%;
+                padding-top: 0;
+                padding-right: $spacing-min;
+                border-top: none;
+
+                aside {
+                    display: none;
+                }
+            }
+
+            aside {
+                width: 25%;
+                padding-left: $spacing-min;
+            }
+        }
+
+        &.andeavor {
+            .logo {
+                max-width: 75px;
+            }
+        }
+
+        &.tease {
+            .logo {
+                max-width: 135px;
+            }
+        }
+
+        &.walottery {
+            .logo {
+                max-width: 90px;
+            }
+        }
+    }
+
+    @media (min-width: $screen-lrg) {
+        > div {
+            > div {
+                padding-right: $spacing-max;
+            }
+
+            aside {
+                padding-left: $spacing-max;
+            }
+        }
+
+        &.andeavor {
+            .logo {
+                max-width: 80px;
+            }
+        }
+
+        &.tease {
+            .logo {
+                max-width: 150px;
+            }
+        }
+    }
+}
+
+#work-header {
+    &:after {
+        margin: ($spacing-min / 2) 0 15px;
+        content: "\2014";
+        font-size: 18px;
+        font-weight: normal;
+        display: block;
+    }
+
+    h1 {
         a,
         span {
             margin-left: 2px;
@@ -42,119 +304,99 @@
         }
     }
 
-    h3 {
-        padding: ($spacing-min / 2) 0;
-        margin-bottom: $spacing-min / 2;
-        border-bottom: 1px solid #ccc;
-    }
-
-    ul {
-        margin-bottom: $spacing-min / 2;
-        margin-left: $spacing-min;
-    }
-
     > div {
+        width: 100%;
+        display: table;
+
         > div {
+            vertical-align: middle;
+            display: table-cell;
+
             &:first-child {
-                padding-top: $spacing-min;
-                border-top: 1px solid #ccc;
+                width: 75%;
+                padding-right: $spacing-min / 2;
+            }
+
+            &:last-child {
+                width: 25%;
+                padding-left: $spacing-min / 2;
+                text-align: center;
             }
         }
     }
 
     .logo {
-        margin: 0 auto $spacing-max;
         display: none;
     }
 
-    &.tease {
-        h1 {
-            a {
-                &:after {
-                    color: $color-tease;
-                }
-            }
-        }
-
-        h3 {
-            border-color: lighten($color-tease, 25%);
-        }
-
-        > div {
-            > div {
-                &:first-child {
-                    border-color: lighten($color-tease, 25%);
-
-                    > p {
-                        &:first-child {
-                            border-color: lighten($color-tease, 25%);
-                        }
-                    }
-                }
-            }
-        }
-
-        img {
-            width: 100%;
-            max-width: 150px;
-            height: auto;
+    @media (min-width: 375px) {
+        .logo {
+            display: inline-block;
         }
     }
 
     @media (min-width: $screen-med) {
-        h1 {
-            margin-bottom: $spacing-max;
+        &:after {
+            margin: 15px 0;
+        }
 
+        h1 {
             a {
                 &:after {
-                    //font-size: 86%;
-                    padding-left: 10px;
+                    padding-left: 9px;
                 }
 
                 &:hover {
                     &:after {
-                        padding-left: 14px;
-                    }
-                }
-            } 
-        }
-
-        h3 {
-            padding-top: $spacing-min;
-        }
-
-        .logo {
-            display: block;
-        }
-
-        > div {
-            width: 100%;
-            display: table;
-
-            > div {
-                vertical-align: top;
-                display: table-cell;
-
-                &:first-child {
-                    width: 75%;
-                    padding-top: 0;
-                    padding-right: $spacing-max;
-                    border-top: none;
-
-                    + div {
-                        width: 25%;
-                        padding-top: $spacing-max;
-                        padding-left: $spacing-max;
-                    }
-
-                    > p {
-                        &:first-child {
-                            padding-top: $spacing-max;
-                            border-top: 1px solid #ccc;
-                        }
+                        padding-left: 13px;
                     }
                 }
             }
+        }
+
+        > div {
+            > div {
+                &:first-child {
+                    padding-right: $spacing-min;
+                }
+
+                &:last-child {
+                    padding-left: $spacing-min;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen-lrg) {
+        > div {
+            > div {
+                &:first-child {
+                    padding-right: $spacing-max;
+                }
+
+                &:last-child {
+                    padding-left: $spacing-max;
+                }
+            }
+        }
+    }
+}
+
+.work-screens {
+    margin-top: $spacing-min + 10px;
+    clear: both;
+    text-align: center;
+
+    img {
+        margin-bottom: $spacing-min;
+    }
+
+    @media (min-width: $screen-med) {
+        margin-top: $spacing-max;
+
+        img {
+            margin-bottom: $spacing-max;
         }
     }
 }

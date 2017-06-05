@@ -1,0 +1,35 @@
+mixin aside()
+    aside
+        h3 Launched:
+        p March 2016
+        h3 Responsibities:
+        ul
+            li Development
+        h3 Technologies:
+        ul
+            li HTML
+            li LESS
+            li JavaScript
+            li C#
+            
+            li Grunt
+
+header#work-header
+    div
+        div
+            h1 !{title.replace(" - ", "<a href='http://www.walottery.com' target='_blank'>")}
+        div
+            img(class="logo", src="/imgs/work/walottery/logo.svg", width="90", height="90", alt="Washington's Lottery")
+div
+    div
+        p This lovely salon located in the Ballard neighborhood of Seattle was in need of a website makeover. Being jointly owned by my wife and sister-in-law, they gave me the complete freedom to design and develop the new site. Since launching the site, the salon has seen a steady rise in bookings thanks to UI &amp; SEO improvement, plus Facebook integration. 
+        +aside()
+        div.work-screens
+            img(src="/imgs/work/walottery/screen-home.jpg", width="414", height="736", alt="Home")
+            img(src="/imgs/work/walottery/screen-scratch.jpg", width="414", height="736", alt="Scratch")
+            img(src="/imgs/work/walottery/screen-winning-numbers.jpg", width="414", height="736", alt="Winning Numbers")
+            img(src="/imgs/work/walottery/screen-check-your-ticket.jpg", width="414", height="736", alt="Check Your Ticket")
+            img(src="/imgs/work/walottery/screen-past-drawings.jpg", width="414", height="736", alt="Past Drawings")
+            img(src="/imgs/work/walottery/screen-media.jpg", width="414", height="736", alt="Media")
+    +aside()
+    

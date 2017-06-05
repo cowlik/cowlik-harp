@@ -1,1 +1,34 @@
-h1 !{title.replace(" - ", "<span>")}
+mixin aside()
+    aside
+        h3 Launched:
+        p June 2017
+        h3 Responsibities:
+        ul
+            li Development
+        h3 Technologies:
+        ul
+            li HTML
+            li SASS
+            li JavaScript
+            li Harp
+            li Jade
+            li Gulp
+
+header#work-header
+    div
+        div
+            h1 !{title.replace(" - ", "<a href='http://www.andeavor.com' target='_blank'>")}
+        div
+            img(class="logo", src="/imgs/work/andeavor/logo.svg", width="124", height="98", alt="Andeavor")
+div
+    div
+        p This lovely salon located in the Ballard neighborhood of Seattle was in need of a website makeover. Being jointly owned by my wife and sister-in-law, they gave me the complete freedom to design and develop the new site. Since launching the site, the salon has seen a steady rise in bookings thanks to UI &amp; SEO improvement, plus Facebook integration. 
+        +aside()
+        div.work-screens
+            img(src="/imgs/work/andeavor/screen-home-1.jpg", width="414", height="736", alt="Home")
+            img(src="/imgs/work/andeavor/screen-home-2.jpg", width="414", height="736", alt="Home")
+            img(src="/imgs/work/andeavor/screen-home-3.jpg", width="414", height="736", alt="Home")
+            img(src="/imgs/work/andeavor/screen-home-4.jpg", width="800", height="825", alt="Home")
+            img(src="/imgs/work/andeavor/screen-faq.jpg", width="414", height="736", alt="FAQ")
+    +aside()
+    
