@@ -1,7 +1,7 @@
 mixin aside()
     aside
         h3 Launched:
-        p April 2017
+        p= launch
         h3 Responsibities:
         ul
             li Design
@@ -23,11 +23,11 @@ header#work-header
             h1 !{title.replace(" - ", "<a href='http://www.teaseballard.com' target='_blank'>")}
         div
             img(class="logo", src="/imgs/work/tease/logo.svg", width="232", height="122", alt="Tease")
-div
+section#work-content
     div
-        p This lovely salon located in the Ballard neighborhood of Seattle was in need of a website makeover. Being jointly owned by my wife and sister-in-law, they gave me the complete freedom to design and develop the new site. Since launching the site, the salon has seen a steady rise in bookings thanks to UI &amp; SEO improvement, plus Facebook integration. 
+        p This lovely salon located in the Ballard neighborhood of Seattle was in need of a website "makeover." Being that it is jointly owned by my wife and sister-in-law, they gave me the complete freedom to design and develop the new site. Since launching the website, the salon has seen a steady rise in bookings thanks to UI &amp; SEO improvement, plus Facebook Open Graph integration. 
         +aside()
-        div.work-screens
+        div#work-screens
             img(src="/imgs/work/tease/screen-home-1.jpg", width="414", height="736", alt="Home")
             img(src="/imgs/work/tease/screen-home-2.jpg", width="414", height="736", alt="Home")
             img(src="/imgs/work/tease/screen-home-3.jpg", width="414", height="736", alt="Home")

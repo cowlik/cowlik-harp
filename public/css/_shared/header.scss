@@ -5,19 +5,44 @@
     background: linear-gradient(to bottom, $color-pear 0%, $color-mint 70%);
     flex: none;
 
-    h1 {
+    > div {
         @include container();
+        padding: $spacing-max $spacing-min 5px;
+        position: relative;
     }
 
     a {
-        padding: $spacing-max $spacing-min 5px;
         color: #fff;
         display: inline-block;
     }
 
     @media (min-width: $screen-med) {
-        a {
+        > div {
             padding: ($spacing-max + $spacing-min) $spacing-max 10px;
+        }
+    }
+}
+
+#nav-btn {
+    @include fa-icon();
+    padding: 5px $spacing-min;
+    line-height: 34px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+    &:before {
+        width: 100%;
+        content: $fa-var-bars;
+        font-size: 28px;
+    }
+
+    @media (min-width: $screen-med) {
+        padding: 10px $spacing-max;
+        line-height: 46px;
+
+        &:before {
+            font-size: 34px;
         }
     }
 }

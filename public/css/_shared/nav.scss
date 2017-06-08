@@ -4,7 +4,7 @@
 nav {
     margin-top: $spacing-min;
     background-color: #fff;
-    font-size: 22px;
+    font-size: 24px;
     flex: none;
 
     h2 {
@@ -19,7 +19,6 @@ nav {
     }
 
     li {
-        //border-bottom: 1px solid #eee;
         transition: background-color 0.3s ease-out;
 
         a {
@@ -71,6 +70,22 @@ nav {
             }
         }
 
+        &.cole-weber {
+            span {
+                &:after {
+                    color: $color-coleweber;
+                }
+            }
+        }
+
+        &.columbia-crest {
+            span {
+                &:after {
+                    color: $color-columbia-crest;
+                }
+            }
+        }
+
         &.tease {
             span {
                 &:after {
@@ -79,7 +94,7 @@ nav {
             }
         }
 
-        &.walottery {
+        &.washingtons-lottery {
             span {
                 &:after {
                     color: $color-walottery;
@@ -89,7 +104,7 @@ nav {
     }
 
     @media (max-width: ($screen-min - 1px)) {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     @media (min-width: $screen-med) {

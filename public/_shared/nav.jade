@@ -1,7 +1,7 @@
 mixin a(slug, title)
     a(href="/work/#{slug}") !{title.replace(" - ", "<span>")}
 
-nav
+nav#work
     h2 Latest Work:
     ul
         for item, slug in public.work._data

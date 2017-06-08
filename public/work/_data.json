@@ -1,17 +1,27 @@
 {
     "andeavor": { 
-        "date": "05.23.2017",
         "title": "Andeavor - Day One",
+        "launch": "June 2017",
         "publish": "true"
     },
     "tease": {
-        "date": "05.23.2017",
         "title": "Tease - teaseballard.com",
+        "launch": "April 2017",
         "publish": "true"
     },
-    "walottery": {
-        "date": "05.23.2017",
+    "cole-weber": {
+        "title": "Cole & Weber - coleweber.com",
+        "launch": "January 2017",
+        "publish": "true"
+    },
+    "washingtons-lottery": {
         "title": "Washington's Lottery - walottery.com",
+        "launch": "March 2016",
+        "publish": "true"
+    },
+    "columbia-crest": {
+        "title": "Columbia Crest - Crowdsourced Cabernet",
+        "launch": "June 2015",
         "publish": "true"
     }
 }

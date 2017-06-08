@@ -10,7 +10,7 @@ mixin title()
 mixin main()
     if current.path.length > 1
         if publish != "false"
-            main(id="#{current.path[0]}", class="#{current.path[1]}")
+            main(class="#{current.path[1]}")
                 != yield
         else
             main
@@ -32,4 +32,4 @@ html(lang="en")
     +main()
     != partial("_shared/nav")
     != partial("_shared/footer")
-    //!= partial("_shared/js")
+    != partial("_shared/js")

@@ -1,0 +1,32 @@
+mixin aside()
+    aside
+        h3 Launched:
+        p= launch
+        h3 Responsibities:
+        ul
+            li UI
+            li Development
+        h3 Technologies:
+        ul
+            li HTML
+            li LESS
+            li JavaScript
+            li Grunt
+
+header#work-header
+    div
+        div
+            h1 !{title.replace(" - ", "<span>")}
+        div &nbsp;
+section#work-content
+    div
+        p "This is your chance to take control of 5 acres of grapes and become a winemaker to help craft Columbia Crest's 2015 Crowdsourced Cabernet." Based on the award winning 2014 website, the 2015 version includes new features such as: user profiles, enhanced voting &amp; voting history, daily vineyard cameras, and a fully responsive interface.
+        +aside()
+        div#work-screens
+            img(src="/imgs/work/columbia-crest/screen-cams-2015.jpg", width="414", height="736", alt="Cams - 2015")
+            img(src="/imgs/work/columbia-crest/screen-dashboard.jpg", width="800", height="825", alt="Dashboard", class="work-screen-lrg")
+            img(src="/imgs/work/columbia-crest/screen-conditions.jpg", width="800", height="825", alt="Conditions", class="work-screen-lrg")
+            img(src="/imgs/work/columbia-crest/screen-cams-2014.jpg", width="800", height="825", alt="Cams - 2014", class="work-screen-lrg")
+            img(src="/imgs/work/columbia-crest/screen-home.jpg", width="414", height="736", alt="Home")
+    +aside()
+    

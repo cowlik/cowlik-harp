@@ -1,0 +1,30 @@
+{
+  "name": "cowlik",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-uglify": "^1.5.3",
+    "vinyl-paths": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cowlik/cowlik.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cowlik/cowlik/issues"
+  },
+  "homepage": "https://github.com/cowlik/cowlik#readme"
+}

@@ -1,0 +1,18 @@
+AddDefaultCharset utf-8
+
+AddType  application/font-woff2  .woff2
+
+ErrorDocument 403 /
+ErrorDocument 404 /404.html
+
+Options +FollowSymLinks
+
+RewriteEngine on
+RewriteBase /
+
+# Redirect .html
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteRule ^work[/]?$ #work [R=301,NE,L]

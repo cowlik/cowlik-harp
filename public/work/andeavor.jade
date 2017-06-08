@@ -1,7 +1,7 @@
 mixin aside()
     aside
         h3 Launched:
-        p June 2017
+        p= launch
         h3 Responsibities:
         ul
             li UI
@@ -21,15 +21,15 @@ header#work-header
             h1 !{title.replace(" - ", "<a href='http://www.andeavor.com' target='_blank'>")}
         div
             img(class="logo", src="/imgs/work/andeavor/logo.svg", width="124", height="98", alt="Andeavor")
-div
+section#work-content
     div
-        p Our client, Tesoro, wanted to announce their acquisition and merging with Western Refining, becoming a new company called Andeavor. They requested the release of two microsites simultaneously on the day of their announcement, one public and one internal. Utilizing shared UI elements, I came up with a solution to quickly switch between these two versions and publish updated content under some very tight deadlines. 
+        p Our client, Tesoro, wanted to announce their acquisition and merge with Western Refining, forming a new company called Andeavor. They requested the release of two microsites simultaneously on the day of their announcement, one public and one internal. Utilizing shared UI elements, I came up with a solution to quickly switch between these two versions and publish updated content under some very tight deadlines. 
         +aside()
-        div.work-screens
+        div#work-screens
             img(src="/imgs/work/andeavor/screen-home-1.jpg", width="414", height="736", alt="Home")
             img(src="/imgs/work/andeavor/screen-home-2.jpg", width="414", height="736", alt="Home")
             img(src="/imgs/work/andeavor/screen-home-3.jpg", width="414", height="736", alt="Home")
-            img(src="/imgs/work/andeavor/screen-home-4.jpg", width="800", height="825", alt="Home")
+            img(src="/imgs/work/andeavor/screen-video.jpg", width="800", height="825", alt="Video", class="work-screen-lrg")
             img(src="/imgs/work/andeavor/screen-faq.jpg", width="414", height="736", alt="FAQ")
     +aside()
     

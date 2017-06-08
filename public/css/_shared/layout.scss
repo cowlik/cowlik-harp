@@ -20,13 +20,17 @@ body {
     height: 100%;
     color: $color-gray;
     font-family: "Podkova", serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: normal;
     display: flex;
     flex-direction: column;
 
     @media (min-width: $screen-med) {
         font-size: 22px;
+    }
+
+    @media (min-width: $screen-lrg) {
+        font-size: 24px;
     }
 }
 
@@ -59,11 +63,15 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
 
     @media (min-width: $screen-med) {
         font-size: 24px;
+    }
+
+    @media (min-width: $screen-lrg) {
+        font-size: 26px;
     }
 }
 
@@ -92,4 +100,16 @@ main,
 footer {
     width: 100%;
     min-width: $screen-min;
+}
+
+.dash {
+    margin: ($spacing-min / 2) 0 15px;
+    color: $color-gray-light;
+    font-size: 18px;
+    font-weight: normal;
+    display: block;
+
+    @media (min-width: $screen-med) {
+        margin: 15px 0;
+    }
 }

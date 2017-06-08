@@ -6,9 +6,8 @@
 @import "_partials/variables";
 @import "_partials/mixins";
 
-#work {
+main {
     padding-bottom: $spacing-max;
-    position: relative;
 
     p {
         margin-bottom: $spacing-min / 2;
@@ -37,18 +36,6 @@
         height: auto;
     }
 
-    > div {
-        > aside {
-            display: none;
-
-            > h3 {
-                &:first-child {
-                    padding-top: 0;
-                }
-            }
-        }
-    }
-
     &.andeavor {
         h1 {
             a {
@@ -73,14 +60,62 @@
                 color: $color-andeavor;
             }
         }
+    }
 
-        .work-screens {
-            img {
-                max-width: 414px;
-
-                &:nth-child(4) {
-                    max-width: 800px;
+    &.cole-weber {
+        h1 {
+            a {
+                &:after {
+                    color: $color-coleweber;
                 }
+            }
+        }
+
+        h3 {
+            &:after {
+                color: $color-coleweber;
+            }
+        }
+
+        p {
+            a {
+                color: $color-coleweber;
+            }
+        }
+
+        .logo {
+            max-width: 40px;
+        }
+
+        #work-header {
+            &:after {
+                color: $color-coleweber;
+            }
+        }
+    }
+
+    &.columbia-crest {
+        h1 {
+            &:after {
+                color: $color-columbia-crest;
+            }
+
+            a {
+                &:after {
+                    color: $color-columbia-crest;
+                }
+            }
+        }
+
+        h3 {
+            &:after {
+                color: $color-columbia-crest;
+            }
+        }
+
+        #work-header {
+            &:after {
+                color: $color-columbia-crest;
             }
         }
     }
@@ -113,15 +148,9 @@
                 color: $color-tease;
             }
         }
-
-        .work-screens {
-            img {
-                max-width: 414px;
-            }
-        }
     }
 
-    &.walottery {
+    &.washingtons-lottery {
         h1 {
             a {
                 &:after {
@@ -145,10 +174,23 @@
                 color: $color-walottery;
             }
         }
+    }
 
-        .work-screens {
-            img {
-                max-width: 414px;
+    @media (min-width: 375px) {
+        &.columbia-crest {
+            #work-header {
+                > div {
+                    > div {
+                        &:first-child {
+                            width: 100%;
+                            padding-right: 0;
+                        }
+
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }
@@ -172,59 +214,19 @@
     }
 
     @media (min-width: $screen-med) {
-        h1 {
-            a {
-                &:after {
-                    padding-left: 10px;
-                }
-
-                &:hover {
-                    &:after {
-                        padding-left: 14px;
-                    }
-                }
-            } 
-        }
-
         h3 {
             padding-top: $spacing-min;
         }
 
-        li {
-            font-size: 20px;
-        }
-
-        > div {
-            width: 100%;
-            padding-top: 10px;
-            display: table;
-
-            > div,
-            > aside {
-                vertical-align: top;
-                display: table-cell;
-            }
-
-            > div {
-                width: 75%;
-                padding-top: 0;
-                padding-right: $spacing-min;
-                border-top: none;
-
-                aside {
-                    display: none;
-                }
-            }
-
-            aside {
-                width: 25%;
-                padding-left: $spacing-min;
-            }
-        }
-
         &.andeavor {
             .logo {
-                max-width: 75px;
+                max-width: 70px;
+            }
+        }
+
+        &.cole-weber {
+            .logo {
+                max-width: 55px;
             }
         }
 
@@ -234,7 +236,7 @@
             }
         }
 
-        &.walottery {
+        &.washingtons-lottery {
             .logo {
                 max-width: 90px;
             }
@@ -242,19 +244,15 @@
     }
 
     @media (min-width: $screen-lrg) {
-        > div {
-            > div {
-                padding-right: $spacing-max;
-            }
-
-            aside {
-                padding-left: $spacing-max;
+        &.andeavor {
+            .logo {
+                max-width: 75px;
             }
         }
 
-        &.andeavor {
+        &.cole-weber {
             .logo {
-                max-width: 80px;
+                max-width: 60px;
             }
         }
 
@@ -278,6 +276,8 @@
     h1 {
         a,
         span {
+            line-height: 100%;
+            margin-top: 5px;
             margin-left: 2px;
             color: $color-gray-light;
             font-size: 60%;
@@ -313,14 +313,14 @@
             display: table-cell;
 
             &:first-child {
-                width: 75%;
-                padding-right: $spacing-min / 2;
+                width: 100%;
             }
 
             &:last-child {
                 width: 25%;
                 padding-left: $spacing-min / 2;
                 text-align: center;
+                display: none;
             }
         }
     }
@@ -332,6 +332,19 @@
     @media (min-width: 375px) {
         .logo {
             display: inline-block;
+        }
+
+        > div {
+            > div {
+                &:first-child {
+                    width: 75%;
+                    padding-right: $spacing-min / 2;
+                }
+
+                &:last-child {
+                    display: table-cell;
+                }
+            }
         }
     }
 
@@ -383,13 +396,68 @@
     }
 }
 
-.work-screens {
+#work-content {
+    > aside {
+        display: none;
+
+        > h3 {
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+
+    @media (min-width: $screen-med) {
+        width: 100%;
+        padding-top: 10px;
+        display: table;
+
+        > div,
+        > aside {
+            vertical-align: top;
+            display: table-cell;
+        }
+
+        > div {
+            width: 75%;
+            padding-top: 0;
+            padding-right: $spacing-min;
+            border-top: none;
+
+            aside {
+                display: none;
+            }
+        }
+
+        aside {
+            width: 25%;
+            padding-left: $spacing-min;
+        }
+    }
+
+    @media (min-width: $screen-lrg) {
+        > div {
+            padding-right: $spacing-max;
+        }
+
+        aside {
+            padding-left: $spacing-max;
+        }
+    }
+}
+
+#work-screens {
     margin-top: $spacing-min + 10px;
     clear: both;
     text-align: center;
 
     img {
+        max-width: 414px;
         margin-bottom: $spacing-min;
+
+        &.work-screen-lrg {
+            max-width: 800px;
+        }
     }
 
     @media (min-width: $screen-med) {
