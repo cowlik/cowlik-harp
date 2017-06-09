@@ -120,6 +120,36 @@ main {
         }
     }
 
+    &.nutshell-classics {
+        h1 {
+            &:after {
+                color: $color-nutshell-classics;
+            }
+
+            a {
+                &:after {
+                    color: $color-nutshell-classics;
+                }
+            }
+        }
+
+        h3 {
+            &:after {
+                color: $color-nutshell-classics;
+            }
+        }
+
+        .logo {
+            max-width: 40px;
+        }
+
+        #work-header {
+            &:after {
+                color: $color-nutshell-classics;
+            }
+        }
+    }
+
     &.tease {
         h1 {
             &:after {
@@ -227,7 +257,8 @@ main {
             }
         }
 
-        &.cole-weber {
+        &.cole-weber,
+        &.nutshell-classics {
             .logo {
                 max-width: 55px;
             }
@@ -253,7 +284,8 @@ main {
             }
         }
 
-        &.cole-weber {
+        &.cole-weber,
+        &.nutshell-classics {
             .logo {
                 max-width: 60px;
             }
@@ -486,9 +518,13 @@ main {
     clear: both;
     text-align: center;
 
-    img {
+    > img {
         max-width: 414px;
         margin-bottom: $spacing-min;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         &.work-screen-lrg {
             max-width: 800px;
@@ -496,8 +532,12 @@ main {
     }
 
     @media (min-width: $screen-med) {
-        img {
+        > img {
             margin-bottom: $spacing-max;
+
+            &:last-child {
+                margin-bottom: $spacing-max;
+            }
         }
     }
 }

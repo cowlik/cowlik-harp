@@ -1,0 +1,18 @@
+- var feature1 = public.work._data["washingtons-lottery"]
+- var feature2 = public.work._data["tease"]
+
+section#features
+    h2 Featured Work:
+    div
+        div(id="feature-1", onclick="ga('send', 'event', 'Feature - Washington\u2019s Lottery', 'Click', '/work/washingtons-lottery'); window.open('/work/washingtons-lottery', '_self');")
+            div
+                img(src="/imgs/work/washingtons-lottery/logo-white.svg", width="90", height="90", alt="Washington's Lottery")
+            div
+                h3 !{feature1.title.replace(" - ", "<span>")}
+                p After a good 10-year run, it was time to retire their former website and, in turn, build a fresher, responsive website
+        div(id="feature-2", onclick="ga('send', 'event', 'Feature - Tease', 'Click', '/work/tease'); window.open('/work/tease', '_self');")
+            div
+                img(src="/imgs/work/tease/logo.svg", width="232", height="122", alt="Tease")
+            div
+                h3 !{feature2.title.replace(" - ", "<span>")}
+                p This lovely salon located in the Ballard neighborhood of Seattle was in need of a website "makeover."

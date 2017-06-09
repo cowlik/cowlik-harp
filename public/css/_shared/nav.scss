@@ -87,6 +87,14 @@ nav {
             }
         }
 
+        &.nutshell-classics{
+            span {
+                &:after {
+                    color: $color-nutshell-classics;
+                }
+            }
+        }
+
         &.tease {
             span {
                 &:after {
@@ -138,7 +146,7 @@ nav {
     }
 }
 
-#nav-social {
+#nav-contact {
     @include container();
     padding: $spacing-min $spacing-min 0;
 

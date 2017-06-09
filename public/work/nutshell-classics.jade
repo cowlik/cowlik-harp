@@ -1,0 +1,33 @@
+mixin aside()
+    aside
+        div
+            h3 Launched:
+            p= launch
+            h3 Responsibities:
+            ul
+                li UI
+                li Development
+        div
+            h3 Technologies:
+            ul
+                li HTML
+                li LESS
+                li JavaScript
+                li Grunt
+
+header#work-header
+    div
+        div
+            h1 !{title.replace(" - ", "<span>")}
+        div
+            img(class="logo", src="/imgs/work/cole-weber/logo.svg", width="30", height="34", alt="Cole & Weber")
+section#work-content
+    div
+        p For our agency's 2014 holiday "card", we acted out and recreated 15 holiday, movie favorites and squished them into 6-second Vine videos. Along with the microsite, I created a carousel to house and autoplay each Vine video as it slides into focus for a seamless experience.
+        +aside()
+        div#work-screens
+            img(src="/imgs/work/nutshell-classics/screen-1.jpg", width="414", height="736", alt="Nutshell Classics")
+            img(src="/imgs/work/nutshell-classics/screen-2.jpg", width="800", height="825", alt="Nutshell Classics", class="work-screen-lrg")
+            img(src="/imgs/work/nutshell-classics/screen-3.jpg", width="414", height="736", alt="Nutshell Classics")
+    +aside()
+    

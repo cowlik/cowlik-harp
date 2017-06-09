@@ -2,9 +2,9 @@ mixin a(slug, title)
     a(href="/work/#{slug}") !{title.replace(" - ", "<span>")}
 
 nav#work
-    div#nav-social
-        a(href="https://www.linkedin.com/in/clintharrison/", target="_blank", class="fa fa-linkedin-square")
-        a(href="https://github.com/cowlik", target="_blank", class="fa fa-github-square")
+    div#nav-contact
+        a(href="https://www.linkedin.com/in/clintharrison/", target="_blank", class="fa fa-linkedin-square", onclick="ga('send', 'event', 'Nav - LinkedIn', 'Click', 'https://www.linkedin.com/in/clintharrison/');")
+        a(href="https://github.com/cowlik", target="_blank", class="fa fa-github-square", onclick="ga('send', 'event', 'Nav - Github', 'Click', 'https://github.com/cowlik');")
         a(href="mailto:#{email}", class="fa fa-envelope-square")
         p.dash &mdash;
     h2 Latest Work:

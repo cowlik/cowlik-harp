@@ -1,6 +1,6 @@
 {
     "andeavor": { 
-        "title": "Andeavor - Day One",
+        "title": "Andeavor - andeavor.com",
         "launch": "June 2017",
         "publish": "true"
     },
@@ -22,6 +22,11 @@
     "columbia-crest": {
         "title": "Columbia Crest - Crowdsourced Cabernet",
         "launch": "June 2015",
+        "publish": "true"
+    },
+    "nutshell-classics": {
+        "title": "Cole & Weber - Nutshell Classics",
+        "launch": "December 2014",
         "publish": "true"
     }
 }
