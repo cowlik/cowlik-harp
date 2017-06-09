@@ -2,6 +2,11 @@ mixin a(slug, title)
     a(href="/work/#{slug}") !{title.replace(" - ", "<span>")}
 
 nav#work
+    div#nav-social
+        a(href="https://www.linkedin.com/in/clintharrison/", target="_blank", class="fa fa-linkedin-square")
+        a(href="https://github.com/cowlik", target="_blank", class="fa fa-github-square")
+        a(href="mailto:#{email}", class="fa fa-envelope-square")
+        p.dash &mdash;
     h2 Latest Work:
     ul
         for item, slug in public.work._data

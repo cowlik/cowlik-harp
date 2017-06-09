@@ -46,7 +46,7 @@ h6 {
 
 h1 {
     font-size: 36px;
-    font-weight: bold;
+    font-weight: 800;
 
     @media (min-width: $screen-med) {
         font-size: 48px;
@@ -55,7 +55,7 @@ h1 {
 
 h2 {
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 700;
 
     @media (min-width: $screen-med) {
         font-size: 36px;
@@ -64,7 +64,7 @@ h2 {
 
 h3 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 700;
 
     @media (min-width: $screen-med) {
         font-size: 24px;
@@ -103,13 +103,15 @@ footer {
 }
 
 .dash {
-    margin: ($spacing-min / 2) 0 15px;
+    margin: ($spacing-min / 2) 0;
     color: $color-gray-light;
     font-size: 18px;
     font-weight: normal;
     display: block;
 
     @media (min-width: $screen-med) {
-        margin: 15px 0;
+        margin: $spacing-min 0;
+        font-size: 20px;
+        font-weight: 700;
     }
 }

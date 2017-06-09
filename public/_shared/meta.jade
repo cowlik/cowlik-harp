@@ -1,17 +1,40 @@
+mixin robots()
+    if current.path[0] == "index"
+        meta(name="robots", content="index, nofollow")
+    else
+        meta(name="robots", content="noindex, nofollow")
+
+mixin og-title()
+    if current.path.length > 1
+        meta(property="og:title", content="#{title} | cowlik")
+    else
+        meta(property="og:title", content="#{title}")
+
 mixin og-url()
     if current.path.length > 1
         meta(property="og:url", content="#{url}/#{current.path[0]}/#{current.path[1]}")
     else
         meta(property="og:url", content="#{url}")
 
+mixin twitter-title()
+    if current.path.length > 1
+        meta(name="twitter:title", content="#{title} | cowlik")
+    else
+        meta(name="twitter:title", content="#{title}")
+
 meta(charset="utf-8")
 meta(name="description", content="#{description}")
-meta(name="keywords", content="#{keywords}")
-meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
++robots()
+meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 meta(http-equiv="X-UA-Compatible", content="IE=edge")
 
 meta(property="fb:app_id", content="#{facebook.app_id}")
 meta(property="og:description", content="#{description}")
-meta(property="og:image", content="#{url}/imgs/card.png")
-meta(property="og:title", content="#{title}")
+meta(property="og:image", content="#{url}/imgs/card-facebook.png")
++og-title()
 +og-url()
+
+meta(name="twitter:card", content="summary")
+meta(name="twitter:description", content="#{description}")
+meta(name="twitter:image", content="#{url}/imgs/card-twitter.png")
++twitter-title()

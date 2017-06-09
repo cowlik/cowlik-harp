@@ -1,0 +1,137 @@
+// feature
+// --------------------------------------------------
+
+#feature {
+    h2 {
+        padding-bottom: 15px;
+    }
+
+    h3 {
+        margin-top: 12px;
+
+        &:after {
+            margin: 5px 0;
+            content: "\2014";
+            color: $color-washingtons-lottery;
+            font-size: 18px;
+            font-weight: normal;
+            display: block;
+        }
+
+        span {
+            line-height: 100%;
+            margin-top: 2px;
+            margin-left: 2px;
+            color: $color-gray-light;
+            font-size: 90%;
+            font-weight: 500;
+            display: block;
+        }
+    }
+
+    p {
+        &:after {
+            @include fa-icon();
+            content: $fa-var-caret-right;
+            padding-left: 7px;
+            color: $color-washingtons-lottery;
+            top: 2px;
+            position: relative;
+            transition: padding-left 0.15s ease-out;
+        }
+    }
+
+    img {
+        width: 100%;
+        max-width: 90px;
+        height: auto;
+    }
+
+    > div {
+        max-width: 430px;
+        cursor: pointer;
+
+        &:hover {
+            p {
+                &:after {
+                    padding-left: 11px;
+                }
+            }
+        }
+
+        > div {
+            display: block;
+
+            &:first-child {
+                padding: $spacing-min;
+                background-color: $color-washingtons-lottery;
+                text-align: center;
+            }
+        }
+    }
+
+    @media (min-width: $screen-med) {
+        display: table;
+
+        h3 {
+            margin-top: 0;
+
+            &:after {
+                margin: 10px 0;
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+
+        p {
+            &:after {
+                padding-left: 10px;
+            }
+        }
+
+        img {
+            max-width: 120px;
+        }
+
+        > div {
+            width: 100%;
+            max-width: 100%;
+            display: table;
+
+            &:hover {
+                p {
+                    &:after {
+                        padding-left: 14px;
+                    }
+                }
+            }
+
+            > div {
+                width: 50%;
+                display: table-cell;
+
+                &:first-child {
+                    padding: $spacing-max;
+                    vertical-align: middle;
+                }
+
+                &:last-child {
+                    padding-left: 25px;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen-lrg) {
+        > div {
+            width: 80%;
+        }
+    }
+
+    @media (min-width: $screen-max) {
+        > div {
+            width: 70%;
+        }
+    }
+}

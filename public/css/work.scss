@@ -66,20 +66,20 @@ main {
         h1 {
             a {
                 &:after {
-                    color: $color-coleweber;
+                    color: $color-cole-weber;
                 }
             }
         }
 
         h3 {
             &:after {
-                color: $color-coleweber;
+                color: $color-cole-weber;
             }
         }
 
         p {
             a {
-                color: $color-coleweber;
+                color: $color-cole-weber;
             }
         }
 
@@ -89,7 +89,7 @@ main {
 
         #work-header {
             &:after {
-                color: $color-coleweber;
+                color: $color-cole-weber;
             }
         }
     }
@@ -154,14 +154,14 @@ main {
         h1 {
             a {
                 &:after {
-                    color: $color-walottery;
+                    color: $color-washingtons-lottery;
                 }
             }
         }
 
         h3 {
             &:after {
-                color: $color-walottery;
+                color: $color-washingtons-lottery;
             }
         }
 
@@ -171,7 +171,7 @@ main {
 
         #work-header {
             &:after {
-                color: $color-walottery;
+                color: $color-washingtons-lottery;
             }
         }
     }
@@ -216,6 +216,11 @@ main {
     @media (min-width: $screen-med) {
         h3 {
             padding-top: $spacing-min;
+
+            &:after {
+                font-size: 20px;
+                font-weight: 700;
+            }
         }
 
         &.andeavor {
@@ -266,7 +271,7 @@ main {
 
 #work-header {
     &:after {
-        margin: ($spacing-min / 2) 0 15px;
+        margin: ($spacing-min / 2) 0;
         content: "\2014";
         font-size: 18px;
         font-weight: normal;
@@ -350,7 +355,9 @@ main {
 
     @media (min-width: $screen-med) {
         &:after {
-            margin: 15px 0;
+            margin: $spacing-min 0;
+            font-size: 20px;
+            font-weight: 700;
         }
 
         h1 {
@@ -400,16 +407,46 @@ main {
     > aside {
         display: none;
 
-        > h3 {
+        > div {
             &:first-child {
-                padding-top: 0;
+                > h3 {
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 375px) {
+        > div {
+            > aside {
+                margin: 0 auto;
+                display: table;
+
+                > div {
+                    display: table-cell;
+
+                    &:first-child {
+                        padding-right: $spacing-max / 2;
+
+                        p {
+                            + h3 {
+                                padding-top: 14px;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        padding-left: $spacing-max / 2;
+                    }
+                }
             }
         }
     }
 
     @media (min-width: $screen-med) {
         width: 100%;
-        padding-top: 10px;
         display: table;
 
         > div,

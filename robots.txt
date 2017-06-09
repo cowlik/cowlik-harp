@@ -1,8 +1,2 @@
 User-agent: *
-Disallow: /
-Disallow: /css/
-Disallow: /imgs/
-Disallow: /js/
-Disallow: /work/
-Noindex: /
 Sitemap: http://www.cowlik.com/sitemap.xml

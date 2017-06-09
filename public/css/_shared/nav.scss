@@ -5,11 +5,12 @@ nav {
     margin-top: $spacing-min;
     background-color: #fff;
     font-size: 24px;
+    clear: both;
     flex: none;
 
     h2 {
         @include container();
-        padding: $spacing-min;
+        padding: 0 $spacing-min $spacing-min;
     }
 
     ul {
@@ -27,7 +28,7 @@ nav {
             max-width: $screen-max;
             padding: 15px $spacing-min;
             color: $color-gray;
-            font-weight: 500;
+            font-weight: 600;
             overflow: hidden;
             position: relative;
             display: block;
@@ -36,14 +37,14 @@ nav {
          span {
             margin-left: 2px;
             font-size: 75%;
-            font-weight: normal;
+            font-weight: 500;
             display: block;
 
             &:after {
                 @include fa-icon();
                 content: $fa-var-caret-right;
                 padding-left: 7px;
-                top: 1px;
+                top: 2px;
                 position: relative;
                 transition: padding-left 0.15s ease-out;
             }
@@ -73,7 +74,7 @@ nav {
         &.cole-weber {
             span {
                 &:after {
-                    color: $color-coleweber;
+                    color: $color-cole-weber;
                 }
             }
         }
@@ -97,7 +98,7 @@ nav {
         &.washingtons-lottery {
             span {
                 &:after {
-                    color: $color-walottery;
+                    color: $color-washingtons-lottery;
                 }
             }
         }
@@ -111,12 +112,12 @@ nav {
         font-size: 32px;
 
         h2 {
-            padding: $spacing-min $spacing-max;
+            padding: 0 $spacing-max $spacing-min;
         }
 
         li {
             a {
-                padding: 20px $spacing-max;
+                padding: 25px $spacing-max;
             }
 
             span {
@@ -133,6 +134,34 @@ nav {
                     }
                 }
             }
+        }
+    }
+}
+
+#nav-social {
+    @include container();
+    padding: $spacing-min $spacing-min 0;
+
+    a {
+        margin-right: 15px;
+        font-size: 32px;
+        transition: color 0.25s ease-out;
+
+        &:hover {
+            color: $color-gray-light;
+        }
+    }
+
+    .dash {
+        color: $color-mint;
+    }
+
+    @media (min-width: $screen-med) {
+        padding: 30px $spacing-max 0;
+
+        a {
+            margin-right: 18px;
+            font-size: 38px;
         }
     }
 }

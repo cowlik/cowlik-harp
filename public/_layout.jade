@@ -1,9 +1,9 @@
 mixin title()
     if current.path.length > 1
         if publish != "false"
-            title= "cowlik | " + title
+            title= title + " | cowlik"
         else
-            title= "cowlik | 404"
+            title= "404 | cowlik"
     else
         title= title
 
@@ -24,9 +24,9 @@ html(lang="en")
   head
     +title()
     != partial("_shared/meta")
-    //link(rel="icon", href="/favicon.png")
+    link(rel="icon", href="/favicon.png")
     != partial("_shared/css")
-    //!= partial("_shared/analytics")
+    != partial("_shared/analytics")
   body
     != partial("_shared/header")
     +main()
