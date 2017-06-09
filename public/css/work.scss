@@ -14,7 +14,7 @@ main {
     }
 
     h3 {
-        padding-top: $spacing-min;
+        padding-top: 30px;
         
         &:after {
             content: "\2014";
@@ -215,8 +215,6 @@ main {
 
     @media (min-width: $screen-med) {
         h3 {
-            padding-top: $spacing-min;
-
             &:after {
                 font-size: 20px;
                 font-weight: 700;
@@ -484,7 +482,7 @@ main {
 }
 
 #work-screens {
-    margin-top: $spacing-min + 10px;
+    margin-top: $spacing-max;
     clear: both;
     text-align: center;
 
@@ -498,8 +496,6 @@ main {
     }
 
     @media (min-width: $screen-med) {
-        margin-top: $spacing-max;
-
         img {
             margin-bottom: $spacing-max;
         }
