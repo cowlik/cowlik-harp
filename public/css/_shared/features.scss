@@ -33,14 +33,18 @@
     }
 
     p {
-        &:after {
-            @include fa-icon();
-            content: $fa-var-caret-right;
-            padding-left: 7px;
-            color: $color-mint;
-            top: 2px;
-            position: relative;
-            transition: padding-left 0.15s ease-out;
+        span {
+            display: inline-block;
+
+            &:after {
+                @include fa-icon();
+                content: $fa-var-caret-right;
+                padding-left: 7px;
+                color: $color-mint;
+                top: 2px;
+                position: relative;
+                transition: padding-left 0.15s ease-out;
+            }
         }
     }
 
@@ -63,8 +67,10 @@
 
             &:hover {
                 p {
-                    &:after {
-                        padding-left: 11px;
+                    span {
+                        &:after {
+                            padding-left: 11px;
+                        }
                     }
                 }
             }
@@ -109,8 +115,10 @@
         }
 
         p {
-            &:after {
-                padding-left: 10px;
+            span {
+                &:after {
+                    padding-left: 10px;
+                }
             }
         }
 
@@ -134,8 +142,10 @@
 
                 &:hover {
                     p {
-                        &:after {
-                            padding-left: 14px;
+                        span {
+                            &:after {
+                                padding-left: 14px;
+                            }
                         }
                     }
                 }
@@ -166,8 +176,10 @@
     }
 
     p {
-        &:after {
-            color: $color-washingtons-lottery;
+        span {
+            &:after {
+                color: $color-washingtons-lottery;
+            }
         }
     }
 
@@ -191,13 +203,15 @@
 #feature-2 {
     h3 {
         &:after {
-            color: $color-tease;
+            color: $color-cole-weber;
         }
     }
 
     p {
-        &:after {
-            color: $color-tease;
+        span {
+            &:after {
+                color: $color-cole-weber;
+            }
         }
     }
 
@@ -207,19 +221,13 @@
 
     > div {
         &:first-child {
-            background-color: lighten($color-tease, 37%);
+            background-color: $color-cole-weber;
         }
     }
 
     @media (min-width: $screen-med) {
         img {
             max-width: 170px;
-        }
-    }
-
-    @media (min-width: $screen-lrg) {
-        img {
-            max-width: 180px;
         }
     }
 }

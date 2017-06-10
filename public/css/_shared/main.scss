@@ -13,4 +13,9 @@ main {
     @media (min-width: $screen-med) {
         padding: $spacing-max;
     }
+
+    @media print {
+        margin-top: 0.5in;
+        padding: 0; 
+    }
 }

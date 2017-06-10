@@ -1,0 +1,84 @@
+// resume
+// --------------------------------------------------
+
+@import "_font-awesome-4.7.0/font-awesome";
+
+@import "_partials/variables";
+@import "_partials/mixins";
+
+main {
+    h1 {
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+        line-height: 100%;
+    }
+
+    h3 {
+        margin-bottom: 3px;
+        line-height: 100%;
+        font-weight: 600;
+    }
+
+    h4 {
+        margin-bottom: 3px;
+        color: $color-gray-light;
+        font-weight: 500;
+    }
+
+    a {
+        font-size: 18px;
+        margin-left: 3px;
+        transition: color 0.25s ease-out;
+        display: block;
+
+        &:hover {
+            color: $color-gray-light;
+        }
+
+        &.fa-print {
+            margin-left: 0;
+            font-size: 28px;
+            display: inline-block;
+            float: right;
+        }
+    }
+
+    .dash {
+        color: $color-mint;
+    }
+
+    @media (min-width: $screen-med) {
+        a {
+            font-size: 20px;
+
+            &.fa-print {
+                font-size: 34px;
+            }
+        }
+
+        p {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    @media print {
+        a {
+            font-size: 12pt;
+
+            &.fa-print {
+                display: none;
+            }
+        }
+
+        p {
+            span {
+                display: block;
+            }
+        }
+    }
+}

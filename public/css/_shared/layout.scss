@@ -32,6 +32,10 @@ body {
     @media (min-width: $screen-lrg) {
         font-size: 24px;
     }
+
+    @media print {
+        font-size: 12pt;
+    }
 }
 
 h1,
@@ -41,7 +45,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    color: $color-gray-light;
+    color: $color-gray;
 }
 
 h1 {
@@ -51,6 +55,10 @@ h1 {
     @media (min-width: $screen-med) {
         font-size: 48px;
     }
+
+    @media print {
+        font-size: 22pt;
+    }
 }
 
 h2 {
@@ -59,6 +67,10 @@ h2 {
 
     @media (min-width: $screen-med) {
         font-size: 36px;
+    }
+
+    @media print {
+        font-size: 18pt;
     }
 }
 
@@ -72,6 +84,27 @@ h3 {
 
     @media (min-width: $screen-lrg) {
         font-size: 26px;
+    }
+
+    @media print {
+        font-size: 16pt;
+    }
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+
+    @media (min-width: $screen-med) {
+        font-size: 20px;
+    }
+
+    @media (min-width: $screen-lrg) {
+        font-size: 22px;
+    }
+
+    @media print {
+        font-size: 14pt;
     }
 }
 
@@ -104,7 +137,7 @@ footer {
 
 .dash {
     margin: ($spacing-min / 2) 0;
-    color: $color-gray-light;
+    color: #999;
     font-size: 18px;
     font-weight: normal;
     display: block;
@@ -113,5 +146,9 @@ footer {
         margin: $spacing-min 0;
         font-size: 20px;
         font-weight: 700;
+    }
+
+    @media print {
+        margin: 10px 0;
     }
 }

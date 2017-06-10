@@ -36,6 +36,7 @@ nav {
 
          span {
             margin-left: 2px;
+            color: $color-gray-light;
             font-size: 75%;
             font-weight: 500;
             display: block;
@@ -143,6 +144,10 @@ nav {
                 }
             }
         }
+    }
+
+    @media print {
+        display: none;
     }
 }
 

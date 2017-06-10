@@ -21,6 +21,10 @@
             padding: ($spacing-max + $spacing-min) $spacing-max 10px;
         }
     }
+
+    @media print {
+        display: none;
+    }
 }
 
 #nav-btn {

@@ -23,4 +23,8 @@ footer {
             padding: 0 $spacing-max;
         }
     }
+
+    @media print {
+        display: none;
+    }
 }
