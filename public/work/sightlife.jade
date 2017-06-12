@@ -1,0 +1,34 @@
+mixin aside()
+    aside
+        div
+            h3 Launched:
+            p= launch
+            h3 Responsibities:
+            ul
+                li UI
+                li Development
+        div
+            h3 Technologies:
+            ul
+                li HTML
+                li CSS
+                li JavaScript
+
+header#work-header
+    div
+        div
+            h1 !{title.replace(" - ", "<span>")}
+        div
+            img(class="logo", src="/imgs/work/sightlife/logo.svg", width="36", height="36", alt="SightLife")
+section#work-content
+    div
+        p "We spent time with some of our recipient and donor families. On our travels, we heard their stories and even provided cameras so recipients could show us the world through their new eyes. The results are an inspiring reminder that every surgery can change a life." In an effort to showcase all the fantastic imagery captured by our in-house photographer and all the eye-donor recipients, our agency designed a full-screen slideshow/scrolling experience. The result was a fun and engaging microsite which allowed me to push my skills outside of my comfort zone. 
+        +aside()
+        div#work-screens
+            img(src="/imgs/work/sightlife/screen-home.jpg", width="1080", height="825", alt="Home")
+            img(src="/imgs/work/sightlife/screen-recipients-1.jpg", width="1080", height="825", alt="Recipients")
+            img(src="/imgs/work/sightlife/screen-recipients-2.jpg", width="1080", height="825", alt="Recipients")
+            img(src="/imgs/work/sightlife/screen-recipients-3.jpg", width="1080", height="825", alt="Recipients")
+            img(src="/imgs/work/sightlife/screen-donors.jpg", width="1080", height="825", alt="Donors")
+    +aside()
+    

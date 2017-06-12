@@ -1,0 +1,36 @@
+mixin aside()
+    aside
+        div
+            h3 Launched:
+            p= launch
+            h3 Responsibities:
+            ul
+                li Design
+                li UI
+                li Development
+        div
+            h3 Technologies:
+            ul
+                li HTML
+                li CSS
+                li JavaScript
+
+header#work-header
+    div
+        div
+            h1 !{title.replace(" - ", "<a href='http://www.rdsoda.com' target='_blank'>")}
+        div
+            img(class="logo", src="/imgs/work/rdsoda/logo.svg", width="72", height="72", alt="RdSoda")
+section#work-content
+    div
+        p "Visually document and share your traveling experiences in real-time!" For this personal endeavor, I fused Instagram with Google Maps to create a handy, web application which lets you chronologically share your traveling adventures via pictures and geolocation. Next time you hit the road, give it a try!
+        +aside()
+        div#work-screens
+            img(src="/imgs/work/rdsoda/screen-1.jpg", width="414", height="736", alt="RdSoda")
+            img(src="/imgs/work/rdsoda/screen-2.jpg", width="414", height="736", alt="RdSoda")
+            img(src="/imgs/work/rdsoda/screen-3.jpg", width="414", height="736", alt="RdSoda")
+            img(src="/imgs/work/rdsoda/screen-4.jpg", width="414", height="736", alt="RdSoda")
+            img(src="/imgs/work/rdsoda/screen-5.jpg", width="414", height="736", alt="RdSoda")
+            img(src="/imgs/work/rdsoda/screen-6.jpg", width="414", height="736", alt="RdSoda")
+    +aside()
+    

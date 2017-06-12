@@ -28,5 +28,15 @@
         "title": "Cole & Weber - Nutshell Classics",
         "launch": "December 2014",
         "publish": "true"
+    },
+    "sightlife": {
+        "title": "SightLife - The World Through New Eyes",
+        "launch": "May 2014",
+        "publish": "true"
+    },
+    "rdsoda": {
+        "title": "RdSoda - rdsoda.com",
+        "launch": "August 2013",
+        "publish": "true"
     }
 }

@@ -96,6 +96,22 @@ nav {
             }
         }
 
+        &.rdsoda {
+            span {
+                &:after {
+                    color: $color-rdsoda;
+                }
+            }
+        }
+
+        &.sightlife {
+            span {
+                &:after {
+                    color: $color-sightlife;
+                }
+            }
+        }
+
         &.tease {
             span {
                 &:after {

@@ -150,6 +150,64 @@ main {
         }
     }
 
+    &.rdsoda {
+        h1 {
+            a {
+                &:after {
+                    color: $color-rdsoda;
+                }
+            }
+        }
+
+        h3 {
+            &:after {
+                color: $color-rdsoda;
+            }
+        }
+
+        .logo {
+            max-width: 55px;
+        }
+
+        #work-header {
+            &:after {
+                color: $color-rdsoda;
+            }
+        }
+    }
+
+    &.sightlife {
+        h1 {
+            a {
+                &:after {
+                    color: $color-sightlife;
+                }
+            }
+        }
+
+        h3 {
+            &:after {
+                color: $color-sightlife;
+            }
+        }
+
+        .logo {
+            max-width: 55px;
+        }
+
+        #work-header {
+            &:after {
+                color: $color-sightlife;
+            }
+        }
+
+        #work-screens {
+            img {
+                max-width: 1080px;
+            }
+        }
+    }
+
     &.tease {
         h1 {
             &:after {
@@ -264,6 +322,18 @@ main {
             }
         }
 
+        &.sightlife {
+            .logo {
+                max-width: 70px;
+            }
+        }
+
+        &.rdsoda {
+            .logo {
+                max-width: 70px;
+            }
+        }
+
         &.tease {
             .logo {
                 max-width: 135px;
@@ -272,7 +342,7 @@ main {
 
         &.washingtons-lottery {
             .logo {
-                max-width: 90px;
+                max-width: 80px;
             }
         }
     }
@@ -291,9 +361,27 @@ main {
             }
         }
 
+        &.rdsoda {
+            .logo {
+                max-width: 75px;
+            }
+        }
+
+        &.sightlife {
+            .logo {
+                max-width: 75px;
+            }
+        }
+
         &.tease {
             .logo {
                 max-width: 150px;
+            }
+        }
+
+        &.washingtons-lottery {
+            .logo {
+                max-width: 90px;
             }
         }
     }
