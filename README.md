@@ -1,2 +1,2 @@
-# cowlik - v6
+# cowlik
 ## Built with [Harp](https://github.com/sintaxi/harp)
